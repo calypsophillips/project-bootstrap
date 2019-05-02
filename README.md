@@ -52,17 +52,17 @@ capm <- lm(y~z)
 #The bootstrap samples and bootstrap replicates of the beta values are then found using the following function, for n bootstrap samples, to create a list of n bootstrapped beta values.
 
 Alphaboot <- function(x,y,z){
-bs <- sample(x, 59, TRUE)
-Bootres <- c(y+bs)
-return(lm(Bootres~z)$coefficients[1])
++ bs <- sample(x, 59, TRUE)
++ Bootres <- c(y+bs)
++ return(lm(Bootres~z)$coefficients[1])
 }
 
 alphasX <- replicate(n, Alphaboot(residX, p, q))
 
 Betaboot <- function(x,y,z){
-bs <- sample(x, 59, TRUE)
-Bootres <- c(y+bs)
-return(lm(Bootres~z)$coefficients[2])
++ bs <- sample(x, 59, TRUE)
++ Bootres <- c(y+bs)
++ return(lm(Bootres~z)$coefficients[2])
 }
 
 residX <- capm$residuals
@@ -113,7 +113,7 @@ inovs <- function(a,b,c,d,e,f,g,h,i,q){
 }
 
 semis <- function(a,b,c,d,e,f,g,h,i,q,B){
-replicate(B, inovs(a,b,c,d,e,f,g,h,i,q))
++ replicate(B, inovs(a,b,c,d,e,f,g,h,i,q))
 }
 
 #Michaud (Using portfolio.r package created by Eric Zivot)
