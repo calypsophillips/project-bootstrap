@@ -1,9 +1,9 @@
 # project-bootstrap
 Code used for bootstrap in portfolio management project
 
-> %Standard bootstrap methods:
+> %Standard bootstrap methods:%
 
-> %Finding bootstrap samples and replications using R
+> %Finding bootstrap samples and replications using R%
 
 > bootsamples <- lapply(1:B, function(i)sample(x, replace=T))
 
